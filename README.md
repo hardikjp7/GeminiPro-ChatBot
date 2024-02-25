@@ -23,7 +23,7 @@ Gemini Chatbot is an interactive chatbot built using Streamlit and Google's **Ge
 
 2. **Navigate to Project Directory:**
    ```bash
-   cd gemini-chatbot
+   cd GeminiPro-ChatBot
    ```
 
 3. **Install Dependencies:**
