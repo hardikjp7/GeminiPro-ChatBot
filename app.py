@@ -1,9 +1,3 @@
-"""
-Auther: Hardik Parmar
-Linkedin: https://www.linkedin.com/in/hardikjp/
-Github: https://github.com/hardikjp7
-"""
-
 import os
 import streamlit as st
 from dotenv import load_dotenv
@@ -22,6 +16,7 @@ st.set_page_config(
 # Sidebar to input Google API Key
 st.sidebar.title("Gemini-Pro Configuration")
 GOOGLE_API_KEY = st.sidebar.text_input("Enter your Google API Key", type="password")
+
 # Guide for obtaining Google API Key if not available
 st.sidebar.subheader("Don't have a Google API Key?")
 st.sidebar.write("Visit [Google Makersuite](https://makersuite.google.com/app/apikey) and log in with your Google account. Then click on 'Create API Key'.")
@@ -34,7 +29,7 @@ if not GOOGLE_API_KEY:
 
 # Set up Google Gemini-Pro AI model
 gen_ai.configure(api_key=GOOGLE_API_KEY)
-model = gen_ai.GenerativeModel('gemini-pro')
+model = gen_ai.GenerativeModel('gemini-1.0-pro')
 
 # Function to translate roles between Gemini-Pro and Streamlit terminology
 def translate_role_for_streamlit(user_role):
@@ -49,6 +44,8 @@ if "chat_session" not in st.session_state:
 
 # Display the chatbot's title on the page
 st.title("🤖 Gemini Pro - ChatBot")
+
+# Add small text below the header
 st.markdown("Made by 😎 [Hardik](https://www.linkedin.com/in/hardikjp/)")
 
 # Display the chat history
@@ -57,7 +54,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask Gemini-Pro...")
+user_prompt = st.chat_input("Ask ✨Gemini-Pro...")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)
