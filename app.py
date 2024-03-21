@@ -19,7 +19,7 @@ GOOGLE_API_KEY = st.sidebar.text_input("Enter your Google API Key", type="passwo
 
 # Guide for obtaining Google API Key if not available
 st.sidebar.subheader("Don't have a Google API Key?")
-st.sidebar.write("Visit [Google Makersuite](https://makersuite.google.com/app/apikey) and log in with your Google account. Then click on 'Create API Key'.")
+st.sidebar.write("Visit [Google's Aistudio](https://aistudio.google.com/app/apikey) and log in with your Google account. Then click on 'Create API Key'.")
 
 
 # Check if API key is provided
